@@ -1,0 +1,22 @@
+#theTitle {
+    -fx-font-family: Arial;
+    -fx-font-size: 20px;
+}
+
+.table .column-header{
+
+    -fx-pref-height: 35px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #202020;
+
+
+
+}
+.table .table-column{
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+
+}
+.table{
+    -fx-background-color: #202020;
+}

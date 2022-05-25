@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acpgui.ACPDetailedRecordController">
+   <children>
+      <TextField fx:id="username" editable="false" layoutX="216.0" layoutY="114.0" prefHeight="35.0" prefWidth="350.0" text="#">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" disable="true" editable="false" layoutX="216.0" layoutY="200.0" prefHeight="35.0" prefWidth="350.0" visible="false">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="note" layoutX="54.0" layoutY="277.0" prefHeight="67.0" prefWidth="516.0" wrapText="true">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </TextArea>
+      <Line endX="432.66668701171875" endY="-7.62939453125E-6" layoutX="133.0" layoutY="64.0" startX="-100.0" />
+      <Button layoutX="32.0" layoutY="29.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: none; -fx-border-radius: 50%;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgResources/back-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="pageTitle" layoutX="75.0" layoutY="23.0" prefHeight="35.0" prefWidth="491.0" text="BLANK">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="link" layoutX="32.0" layoutY="118.0" onMouseClicked="#linkOnClick" prefHeight="24.0" prefWidth="131.0" text="BLANK" textFill="#020202" underline="true">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="216.0" layoutY="84.0" prefHeight="30.0" prefWidth="131.0" text="Username:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="170.0" prefHeight="30.0" prefWidth="131.0" text="Password:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="88.0" prefHeight="30.0" prefWidth="131.0" text="Link:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="247.0" prefHeight="30.0" prefWidth="131.0" text="Note:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="edit" layoutX="381.0" layoutY="359.0" onMouseClicked="#editOnClick" prefHeight="35.0" prefWidth="80.0" style="-fx-border-color: #0093ff; -fx-border-radius: 5px;" text="Edit" textFill="#0093ff">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="delete" layoutX="486.0" layoutY="359.0" onAction="#deleteOnClick" prefHeight="35.0" prefWidth="80.0" style="-fx-border-color: #0093ff; -fx-border-radius: 5px;" text="Delete" textFill="#0093ff">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="passwordField" editable="false" layoutX="216.0" layoutY="200.0" prefHeight="35.0" prefWidth="350.0" text="0000000">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </PasswordField>
+      <TextArea fx:id="linkTextArea" editable="false" layoutX="15.0" layoutY="123.0" prefHeight="109.0" prefWidth="148.0" visible="false" wrapText="true">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </TextArea>
+      <JFXButton fx:id="cancel" layoutX="381.0" layoutY="359.0" onMouseClicked="#cancelOnClick" prefHeight="35.0" prefWidth="80.0" style="-fx-border-color: #848484; -fx-border-radius: 5px;" text="Cancel" textFill="#848484" visible="false">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="apply" layoutX="486.0" layoutY="359.0" onAction="#applyOnClick" prefHeight="35.0" prefWidth="80.0" style="-fx-border-color: #0093ff; -fx-border-radius: 5px;" text="Apply" textFill="#0093ff" visible="false">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <Button layoutX="540.0" layoutY="120.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onMouseClicked="#copyOnClickU" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgResources/copy.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="540.0" layoutY="206.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onMouseClicked="#copyOnClickP" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgResources/copy.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="514.0" layoutY="206.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onMouseClicked="#passwordHideOnClick" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fx:id="passwordImg" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#passwordHideOnClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgResources/hide.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

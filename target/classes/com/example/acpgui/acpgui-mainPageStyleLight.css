@@ -1,0 +1,65 @@
+#theTitle {
+    -fx-font-family: Arial;
+    -fx-font-size: 20px;
+}
+
+.table-view .column-header {
+    -fx-pref-height: 35px;
+    -fx-text-alignment: CENTER;
+}
+.table-view .table-column {
+    -fx-alignment: CENTER;
+
+}
+#tableL{
+    -fx-border-color: black;
+
+}
+#tableD{
+    -fx-selection-bar: #202020;
+}
+
+#tableD{
+    -fx-border-color: #808080;
+}
+
+
+#tableD .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+
+#tableD .column-header {
+    -fx-background-color: #404040;
+}
+
+
+#tableD .table-column {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #404040;
+    -fx-border-color: white;
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+
+
+
+
+
+

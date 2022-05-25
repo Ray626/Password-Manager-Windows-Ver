@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acpgui.ACPUserEditController">
+   <children>
+      <Label layoutX="233.0" layoutY="40.0" prefHeight="42.0" prefWidth="133.0" text="User Profile">
+         <font>
+            <Font name="Calibri" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="135.0" prefHeight="42.0" prefWidth="125.0" text="User Name:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="239.0" layoutY="138.0" prefHeight="33.0" prefWidth="261.0">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="98.0" layoutY="223.0" prefHeight="42.0" prefWidth="125.0" text="Password:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="password" layoutX="239.0" layoutY="227.0" prefHeight="33.0" prefWidth="261.0">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="441.0" layoutY="325.0" onMouseClicked="#applyOnClick" prefHeight="42.0" prefWidth="95.0" style="-fx-border-color: #0093ff; -fx-border-radius: 5px;" text="Apply" textFill="#0093ff">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="323.0" layoutY="325.0" onAction="#cancelOnClick" prefHeight="42.0" prefWidth="95.0" style="-fx-border-color: #848484; -fx-border-radius: 5px;" text="Cancel" textFill="#848484">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

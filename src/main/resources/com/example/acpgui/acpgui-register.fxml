@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acpgui.ACPRegisterController">
+    <Label layoutX="45.0" layoutY="56.0" text="Welcome to Password Manager">
+        <font>
+          <Font size="30.0" />
+        </font>
+    </Label>
+    <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#logInSwitchOnClick" style="-fx-background-color: #0092ff;" text="Back to Login" textFill="#fbfbfb">
+        <font>
+          <Font size="13.0" />
+        </font>
+    </Button>
+    <Label layoutX="87.0" layoutY="145.0" text="Enter User Name:">
+        <font>
+          <Font size="18.0" />
+        </font>
+    </Label>
+    <TextField fx:id="userNameRe" layoutX="249.0" layoutY="144.0">
+        <font>
+          <Font size="14.0" />
+        </font>
+    </TextField>
+    <Label layoutX="93.0" layoutY="223.0" text="Enter Password:">
+        <font>
+          <Font size="18.0" />
+        </font>
+    </Label>
+    <TextField fx:id="passwordRe" layoutX="249.0" layoutY="222.0">
+        <font>
+          <Font size="14.0" />
+        </font>
+    </TextField>
+    <Button layoutX="216.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#signUpOnClick" text="Sign Up">
+        <font>
+          <Font size="16.0" />
+        </font>
+    </Button>
+</AnchorPane>
