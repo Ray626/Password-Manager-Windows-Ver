@@ -53,6 +53,8 @@ public class ACPAddController implements Initializable {
     /**
      * Parameter will be the enum that stores the information of some
      * big companies or famous web. This Java Docs is a reminder.
+     *
+     *
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -72,11 +74,21 @@ public class ACPAddController implements Initializable {
         theCombMessage = s;
     }
 
-
+    /**
+     * Password record checker is required.
+     * @throws NoSuchPaddingException
+     * @throws IllegalBlockSizeException
+     * @throws NoSuchAlgorithmException
+     * @throws BadPaddingException
+     * @throws InvalidKeyException
+     */
     public void submitOnClick() throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
         dataBaseHandler.createConnection();
         PasswordModifier pm = new PasswordModifier(password.getText());
         String theNote = note.getText();
+
+
+
         if (theNote == null){
             theNote = "";
         }
