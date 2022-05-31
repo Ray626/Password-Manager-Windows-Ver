@@ -5,6 +5,7 @@ module com.example.acpgui {
     requires org.apache.derby.commons;
     requires java.sql;
     requires org.kordamp.bootstrapfx.core;
+    requires FXTrayIcon;
 
 
     requires java.desktop;

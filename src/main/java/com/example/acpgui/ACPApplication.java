@@ -27,18 +27,7 @@ public class ACPApplication extends Application {
     public static void main(String[] args) {launch();
     }
 
-    private void addAppToTray() throws IOException {
-        java.awt.Toolkit.getDefaultToolkit();
-        if (!java.awt.SystemTray.isSupported()) {
-            System.out.println("No system tray support, application exiting.");
-            Platform.exit();
-        }
-        java.awt.SystemTray tray = java.awt.SystemTray.getSystemTray();
-        URL iconURL = new URL("com/example/acpgui/imgResources/p-icon.png");
-        java.awt.Image image = ImageIO.read(iconURL);
-        java.awt.TrayIcon trayIcon = new java.awt.TrayIcon(image);
-        //trayIcon.addActionListener(event -> );
-    }
+
 
 
 }

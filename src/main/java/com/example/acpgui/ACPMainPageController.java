@@ -1,6 +1,7 @@
 package com.example.acpgui;
 
 
+import com.dustinredmond.fxtrayicon.FXTrayIcon;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -25,6 +26,7 @@ import javafx.stage.Stage;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
+import javax.imageio.ImageIO;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -59,6 +61,7 @@ public class ACPMainPageController implements Initializable{
     @FXML
     private ImageView colorImg;
 
+
     private Stage stage;
 
 
@@ -74,7 +77,6 @@ public class ACPMainPageController implements Initializable{
 
     public ACPMainPageController(){
         dataBaseHandler  = new DataBaseHandler();
-
     }
 
     public void addOnClick(ActionEvent event) throws IOException {
@@ -165,14 +167,15 @@ public class ACPMainPageController implements Initializable{
         if (colorMode == 0){
             colorMode = 1;
             colormodeNight();
-
-
-
         }else {
             colorMode = 0;
             colorModeDay();
 
         }
+    }
+
+    public void exitButtonOnClick(){
+        Platform.exit();
     }
 
 
@@ -196,11 +199,17 @@ public class ACPMainPageController implements Initializable{
         accountUserNameCol.setCellValueFactory(new PropertyValueFactory<>("accountUserName"));
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         Platform.runLater(() ->{
             stage =(Stage) tableTitle.getScene().getWindow();
+             FXTrayIcon icon = new FXTrayIcon(stage,getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"));
+            icon.show();
+
         });
+
         initializeTableColumn();
         try {
             initializeTableView();
@@ -212,7 +221,6 @@ public class ACPMainPageController implements Initializable{
         }else {
             colormodeNight();
         }
-
 
         }
 
