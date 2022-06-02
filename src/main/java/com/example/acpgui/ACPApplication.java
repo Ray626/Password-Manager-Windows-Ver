@@ -1,16 +1,15 @@
 package com.example.acpgui;
 import javafx.application.Application;
 
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
+
+import javax.swing.*;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Paths;
+import java.util.Objects;
 
 
 public class ACPApplication extends Application {
@@ -21,7 +20,10 @@ public class ACPApplication extends Application {
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.setResizable(false);
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
+
+
     }
 
     public static void main(String[] args) {launch();

@@ -28,10 +28,10 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:19-ea+3" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:win:19-ea+3" level="project" />
     <orderEntry type="library" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:12.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:12.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:12.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:12.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.dustinredmond.fxtrayicon:FXTrayIcon:3.1.2" level="project" />
   </component>
 </module>

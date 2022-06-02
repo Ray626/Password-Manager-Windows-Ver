@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -54,6 +55,7 @@ public class ACPRegisterController {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow() ;
         stage.setScene(scene);
         stage.setTitle("Login");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 

@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javax.crypto.BadPaddingException;
@@ -47,6 +48,7 @@ public class ACPAddController implements Initializable {
         scene.getClass().getResource("acpgui-mainPageStyleLight.css");
         stage.setScene(scene);
         stage.setTitle("Main");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 

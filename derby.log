@@ -1,29 +1,48 @@
 ----------------------------------------------------------------
-Tue May 31 15:01:17 PDT 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0181-1c23-3075-00000c9ee200 
-on database directory C:\Users\2257142\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@49097b5d 
-Loaded from file:/C:/Users/2257142/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Amazon.com Inc.
-java.runtime.version=16.0.2+7
-user.dir=C:\Users\2257142\Documents\GitHub\Password-Manager
+Thu Jun 02 15:04:13 PDT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0181-2672-9771-000006a781e0 
+on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 
+Loaded from file:/C:/Users/99926/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=16.0.1+9-24
+user.dir=C:\Users\99926\Documents\GitHub\Password-Manager
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue May 31 15:01:17 PDT 2022:
-Shutting down instance a816c00e-0181-1c23-3075-00000c9ee200 on database directory C:\Users\2257142\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@49097b5d 
+Thu Jun 02 15:04:13 PDT 2022:
+Shutting down instance a816c00e-0181-2672-9771-000006a781e0 on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 
 ----------------------------------------------------------------
-Tue May 31 15:01:17 PDT 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 08264012-0181-1c23-3075-00000c9ee200 
-on database directory C:\Users\2257142\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@49097b5d 
-Loaded from file:/C:/Users/2257142/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Amazon.com Inc.
-java.runtime.version=16.0.2+7
-user.dir=C:\Users\2257142\Documents\GitHub\Password-Manager
+Thu Jun 02 15:04:13 PDT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 08264012-0181-2672-9771-000006a781e0 
+on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 
+Loaded from file:/C:/Users/99926/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=16.0.1+9-24
+user.dir=C:\Users\99926\Documents\GitHub\Password-Manager
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Jun 02 15:04:15 PDT 2022:
+Shutting down instance 08264012-0181-2672-9771-000006a781e0 on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 
+----------------------------------------------------------------
+Thu Jun 02 15:04:16 PDT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 2057c01b-0181-2672-9771-000006a781e0 
+on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 
+Loaded from file:/C:/Users/99926/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=16.0.1+9-24
+user.dir=C:\Users\99926\Documents\GitHub\Password-Manager
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Jun 02 15:04:21 PDT 2022:
+Shutting down instance 2057c01b-0181-2672-9771-000006a781e0 on database directory C:\Users\99926\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7eda2dbb 

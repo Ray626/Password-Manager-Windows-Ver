@@ -13,4 +13,9 @@
       <module name="aCPGUI" target="16" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aCPGUI" options="--add-exports javafx.graphics/com.sun.javafx.application=com.example.acpgui" />
+    </option>
+  </component>
 </project>

@@ -8,6 +8,7 @@ module com.example.acpgui {
     requires FXTrayIcon;
 
 
+
     requires java.desktop;
     requires com.jfoenix;
 

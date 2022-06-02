@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -64,6 +65,8 @@ public class ACPMainPageController implements Initializable{
 
     private Stage stage;
 
+    public FXTrayIcon icon;
+
 
     private ObservableList<PasswordRecord> records = FXCollections.observableArrayList();
 
@@ -85,6 +88,7 @@ public class ACPMainPageController implements Initializable{
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Add");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 
@@ -94,6 +98,7 @@ public class ACPMainPageController implements Initializable{
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Profile");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
     public void DetailedOnClick() throws IOException{
@@ -101,6 +106,7 @@ public class ACPMainPageController implements Initializable{
         Scene scene = new Scene(root,600,410);
         stage.setScene(scene);
         stage.setTitle("record");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 
@@ -175,7 +181,8 @@ public class ACPMainPageController implements Initializable{
     }
 
     public void exitButtonOnClick(){
-        Platform.exit();
+        System.exit(0);
+        
     }
 
 
@@ -205,9 +212,17 @@ public class ACPMainPageController implements Initializable{
 
         Platform.runLater(() ->{
             stage =(Stage) tableTitle.getScene().getWindow();
-             FXTrayIcon icon = new FXTrayIcon(stage,getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"));
+            icon = new FXTrayIcon(stage,getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"));
             icon.show();
-
+            MenuItem menuShowStage = new MenuItem("Show Stage");
+            MenuItem menuExit = new MenuItem("Exit");
+            menuShowStage.setOnAction(e -> {
+                Platform.runLater(() -> com.sun.javafx.application.PlatformImpl.setTaskbarApplication(false));
+                stage.show();
+            });
+            menuExit.setOnAction(e -> System.exit(0));
+            icon.addMenuItem(menuShowStage);
+            icon.addMenuItem(menuExit);
         });
 
         initializeTableColumn();

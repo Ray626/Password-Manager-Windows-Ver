@@ -80,6 +80,7 @@ public class ACPUserProfileController implements Initializable {
         scene.getClass().getResource("acpgui-mainPageStyleLight.css");
         stage.setScene(scene);
         stage.setTitle("Main");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 
@@ -125,6 +126,7 @@ public class ACPUserProfileController implements Initializable {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Edit");
+        stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
     }
 
