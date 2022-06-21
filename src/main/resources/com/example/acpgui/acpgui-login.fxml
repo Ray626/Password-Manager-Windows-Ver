@@ -7,31 +7,35 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acpgui.ACPLoginController">
-   <TextField fx:id="userName" layoutX="215.0" layoutY="161.0" />
-   <TextField fx:id="passWord" layoutX="215.0" layoutY="216.0" />
-   <Label layoutX="135.0" layoutY="163.0" text="User Name:">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Label>
-   <Label layoutX="135.0" layoutY="218.0" text="Password: ">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Label>
-   <Button layoutX="223.0" layoutY="271.0" mnemonicParsing="false" onAction="#LoginOnClick" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 2px;" text="Login">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Button>
-   <Label layoutX="124.0" layoutY="77.0" text="Password Manager">
-      <font>
-         <Font size="30.0" />
-      </font>
-   </Label>
-   <Button layoutX="343.0" layoutY="337.0" mnemonicParsing="false" onAction="#registerSwitchOnClick" style="-fx-background-color: #f4f4f4; -fx-underline: true;" text="Create New Account" textFill="#007bff">
-      <font>
-         <Font size="13.0" />
-      </font>
-   </Button>
+   <AnchorPane  prefHeight="400.0" prefWidth="500.0">
+      <children>
+         <Button  layoutX="223.0" layoutY="271.0" mnemonicParsing="false" onAction="#LoginOnClick" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 2px;" text="Login">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button layoutX="343.0" layoutY="337.0" mnemonicParsing="false" onAction="#registerSwitchOnClick" style="-fx-background-color: #f4f4f4; -fx-underline: true;" text="Create New Account" textFill="#007bff">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Button>
+         <TextField fx:id="userName" layoutX="215.0" layoutY="161.0" />
+         <TextField fx:id="passWord" layoutX="215.0" layoutY="216.0" />
+         <Label  layoutX="135.0" layoutY="163.0" text="User Name:">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label  layoutX="135.0" layoutY="218.0" text="Password: ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="124.0" layoutY="77.0" text="Password Manager">
+            <font>
+               <Font size="30.0" />
+            </font>
+         </Label>
+      </children>
+   </AnchorPane>
 </AnchorPane>

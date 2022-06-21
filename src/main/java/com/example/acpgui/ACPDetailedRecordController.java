@@ -56,11 +56,13 @@ public class ACPDetailedRecordController implements Initializable {
     @FXML
     private ImageView passwordImg;
 
+    private String usernameBeforeEdited;
 
 
 
     public ACPDetailedRecordController(){
         dataBaseHandler = new DataBaseHandler();
+
 
 
     }
@@ -75,8 +77,10 @@ public class ACPDetailedRecordController implements Initializable {
             PasswordModifier passwordModifier = new PasswordModifier(resultSet.getString("PRIVATE_KEY"),
                     resultSet.getString("ENCODED_MESSAGE"));
             passwordField.setText(passwordModifier.decryptedMessage());
-            System.out.println(passwordModifier.decryptedMessage());
+
             username.setText(resultSet.getString("ACCOUNT_USERNAME"));
+            usernameBeforeEdited = username.getText();
+
             link.setText(resultSet.getString("COMPANY_LINK"));
             note.setText(resultSet.getString("NOTE"));
             record_id = resultSet.getInt("ID");
@@ -120,19 +124,37 @@ public class ACPDetailedRecordController implements Initializable {
         note.setEditable(false);
     }
 
-    public void applyOnClick(ActionEvent event) throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, IOException {
+    public void applyOnClick(ActionEvent event) throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, IOException, SQLException {
         dataBaseHandler.createConnection();
-        PasswordModifier passwordModifier = new PasswordModifier(password.getText());
-        String privateKey = passwordModifier.privateKeyToString();
-        String encodedMessage = passwordModifier.getEncodedMessage();
+        int num = 0;
+        int theID = 101;
 
-        String qu = "UPDATE PASSWORDENTRIES set ACCOUNT_USERNAME = " + "'" + username.getText() + "',"
-                + "PRIVATE_KEY = " + "'" + privateKey + "'," + "ENCODED_MESSAGE = " + "'" + encodedMessage + "',"
-                + "NOTE = " + "'" + note.getText() + "'," + "COMPANY_LINK = " + "'" + linkTextArea.getText() + "'"
-                + "WHERE ID = " + record_id;
-        dataBaseHandler.execUpdate(qu);
+        ResultSet resultSet1 = dataBaseHandler.execQuery("SELECT * from PASSWORDENTRIES where ACCOUNT_USERNAME =" + "'" + username.getText() + "' AND OWNER_ID = " + ACPLoginController.loginId + " AND  COMPANY = " + "'" + pageTitle.getText() + "'" );
+        System.out.println(username.getText());
+        while (resultSet1.next()){
+            num++;
+            //System.out.println(num);
+
+        }
+        if (num >=1 & !username.getText().equals(usernameBeforeEdited)){
+            theAlert("you have already saved an password record with same username");
+
+
+        }else {
+            PasswordModifier passwordModifier = new PasswordModifier(password.getText());
+            String privateKey = passwordModifier.privateKeyToString();
+            String encodedMessage = passwordModifier.getEncodedMessage();
+
+            String qu = "UPDATE PASSWORDENTRIES set ACCOUNT_USERNAME = " + "'" + username.getText() + "',"
+                    + "PRIVATE_KEY = " + "'" + privateKey + "'," + "ENCODED_MESSAGE = " + "'" + encodedMessage + "',"
+                    + "NOTE = " + "'" + note.getText() + "'," + "COMPANY_LINK = " + "'" + linkTextArea.getText() + "'"
+                    + "WHERE ID = " + record_id;
+            dataBaseHandler.execUpdate(qu);
+
+            backOnClick(event);
+        }
         dataBaseHandler.quit();
-        backOnClick(event);
+
 
     }
 
@@ -144,9 +166,7 @@ public class ACPDetailedRecordController implements Initializable {
         backOnClick(event);
     }
 
-    /**
-     * unfinished
-     */
+
     public void passwordHideOnClick(){
         if(mode == 0){
             mode = 1;
@@ -191,6 +211,14 @@ public class ACPDetailedRecordController implements Initializable {
         final ClipboardContent clipboardContent= new ClipboardContent();
         clipboardContent.putString(passwordField.getText());
         clipboard.setContent(clipboardContent);
+    }
+
+    public void theAlert(String message){
+        Alert alert;
+        alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Password Manager");
+        alert.setContentText(message);
+        alert.show();
     }
 
 

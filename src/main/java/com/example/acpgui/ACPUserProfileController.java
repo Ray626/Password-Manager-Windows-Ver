@@ -96,6 +96,7 @@ public class ACPUserProfileController implements Initializable {
         if (resultSet.next()){
             theUsername.setText(resultSet.getString("USERNAME"));
            passwordField.setText(ACPLoginController.sPassWordT);
+
             Timestamp ts = resultSet.getTimestamp("DATE");
             theTime.setText(new SimpleDateFormat("yyyy-MM-dd").format(ts));
         }

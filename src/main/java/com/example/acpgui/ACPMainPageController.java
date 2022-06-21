@@ -14,10 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -152,6 +149,7 @@ public class ACPMainPageController implements Initializable{
         }
         br.close();
         dataBaseHandler.quit();
+        successPopUp();
     }
     public void colormodeNight(){
         colorImg.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/acpgui/imgResources/moon.png"))));
@@ -237,6 +235,15 @@ public class ACPMainPageController implements Initializable{
             colormodeNight();
         }
 
+        }
+
+
+        private void successPopUp(){
+            Alert alert;
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Password Manager");
+            alert.setContentText("password records has been downloaded your computer");
+            alert.show();
         }
 
 

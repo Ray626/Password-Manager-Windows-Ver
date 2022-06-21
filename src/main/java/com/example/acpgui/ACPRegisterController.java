@@ -1,5 +1,4 @@
 package com.example.acpgui;
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -11,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -22,11 +22,15 @@ public class ACPRegisterController {
     private TextField userNameRe,passwordRe;
     private final DataBaseHandler dataBaseHandler;
 
+
+
+
     public ACPRegisterController() throws SQLException {
         dataBaseHandler = new DataBaseHandler();
+
     }
 
-    public void signUpOnClick() throws SQLException {
+    public void signUpOnClick() throws SQLException, IOException {
 
         dataBaseHandler.createConnection();
         String userNameR = userNameRe.getText();
@@ -40,8 +44,12 @@ public class ACPRegisterController {
                 break;
             }
         }
+        /**
+         * problem mark
+         */
         if(check){
-            System.out.println("User Name is already taken.");
+            theAlert();
+
 
         }else {
             dataBaseHandler.execPreparedStmt1(userNameR, passWordR);
@@ -57,6 +65,15 @@ public class ACPRegisterController {
         stage.setTitle("Login");
         stage.getIcons().add( new Image(String.valueOf(getClass().getResource("/com/example/acpgui/imgResources/p-icon.png"))));
         stage.show();
+    }
+
+
+    public void theAlert(){
+        Alert alert;
+        alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Password Manager");
+        alert.setContentText("User Name is already taken.");
+        alert.show();
     }
 
 }

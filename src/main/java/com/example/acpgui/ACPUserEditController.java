@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -45,7 +46,7 @@ public class ACPUserEditController {
             }
         }
         if(check){
-            System.out.println("User Name is already taken.");
+            theAlert();
 
         }else {
             String qu = "UPDATE USERS SET USERNAME = " + "'" + usernameEdited + "'," +  " PASSWORD = "+ passwordEdited +" WHERE USER_ID = " +  id;
@@ -57,7 +58,18 @@ public class ACPUserEditController {
         password.setText("");
 
 
+
+
     }
+
+        public void theAlert(){
+            Alert alert;
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Password Manager");
+            alert.setContentText("User Name is already taken.");
+            alert.show();
+        }
+
 
         public void cancelOnClick(ActionEvent event) throws IOException {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("acpgui-userProfile.fxml")));

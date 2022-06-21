@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -22,6 +23,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.*;
 
 public class ACPAddController implements Initializable {
@@ -84,19 +87,32 @@ public class ACPAddController implements Initializable {
      * @throws BadPaddingException
      * @throws InvalidKeyException
      */
-    public void submitOnClick() throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
+    public void submitOnClick() throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, SQLException {
         dataBaseHandler.createConnection();
         PasswordModifier pm = new PasswordModifier(password.getText());
         String theNote = note.getText();
+        ResultSet resultSet = dataBaseHandler.execQuery("SELECT * from PASSWORDENTRIES where OWNER_ID =" + ACPLoginController.loginId +" AND ACCOUNT_USERNAME =" + "'" + username.getText() + "'" + "AND  COMPANY=" + "'" + theCombMessage + "'" );
+        if(!resultSet.next()){
+            if (theNote == null){
+                theNote = "";
+            }
+            dataBaseHandler.execPreparedStmt2(ACPLoginController.loginId,pm.privateKeyToString(),pm.getEncodedMessage(),theCombMessage,webLink.getText(),username.getText(),theNote);
 
-
-
-        if (theNote == null){
-            theNote = "";
+        }else {
+            theAlert();
         }
-        dataBaseHandler.execPreparedStmt2(ACPLoginController.loginId,pm.privateKeyToString(),pm.getEncodedMessage(),theCombMessage,webLink.getText(),username.getText(),theNote);
         dataBaseHandler.quit();
     }
+
+    public void theAlert(){
+        Alert alert;
+        alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Password Manager");
+        alert.setContentText("you have already saved an password record with same username");
+        alert.show();
+    }
+
+
 
 
 
