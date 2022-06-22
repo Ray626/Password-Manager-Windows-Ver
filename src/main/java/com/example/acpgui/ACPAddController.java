@@ -87,7 +87,7 @@ public class ACPAddController implements Initializable {
      * @throws BadPaddingException
      * @throws InvalidKeyException
      */
-    public void submitOnClick() throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, SQLException {
+    public void submitOnClick(ActionEvent e) throws NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, SQLException, IOException {
         dataBaseHandler.createConnection();
         PasswordModifier pm = new PasswordModifier(password.getText());
         String theNote = note.getText();
@@ -97,6 +97,7 @@ public class ACPAddController implements Initializable {
                 theNote = "";
             }
             dataBaseHandler.execPreparedStmt2(ACPLoginController.loginId,pm.privateKeyToString(),pm.getEncodedMessage(),theCombMessage,webLink.getText(),username.getText(),theNote);
+            backOnClick(e);
 
         }else {
             theAlert();
