@@ -215,7 +215,10 @@ public class ACPMainPageController implements Initializable{
             MenuItem menuShowStage = new MenuItem("Show Stage");
             MenuItem menuExit = new MenuItem("Exit");
             menuShowStage.setOnAction(e -> {
-                Platform.runLater(() -> com.sun.javafx.application.PlatformImpl.setTaskbarApplication(false));
+                /**
+                 * causing errors, but does not affect the use of the program.
+                 */
+                //Platform.runLater(() -> com.sun.javafx.application.PlatformImpl.setTaskbarApplication(false));
                 stage.show();
             });
             menuExit.setOnAction(e -> System.exit(0));
