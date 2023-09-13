@@ -1,58 +1,10 @@
 ----------------------------------------------------------------
-Wed Sep 13 08:31:09 PDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018a-8f2a-ed72-00001e78aa88 
-on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-Loaded from file:/C:/Users/rayyu/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=18.0.1.1+2-6
-user.dir=C:\Users\rayyu\Documents\GitHub\Password-Manager
-os.name=Windows 11
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Sep 13 08:31:10 PDT 2023:
-Shutting down instance a816c00e-018a-8f2a-ed72-00001e78aa88 on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-----------------------------------------------------------------
-Wed Sep 13 08:31:10 PDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 08264012-018a-8f2a-ed72-00001e78aa88 
-on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-Loaded from file:/C:/Users/rayyu/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=18.0.1.1+2-6
-user.dir=C:\Users\rayyu\Documents\GitHub\Password-Manager
-os.name=Windows 11
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Sep 13 08:31:13 PDT 2023:
-Shutting down instance 08264012-018a-8f2a-ed72-00001e78aa88 on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-----------------------------------------------------------------
-Wed Sep 13 08:31:14 PDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 185e801c-018a-8f2a-ed72-00001e78aa88 
-on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-Loaded from file:/C:/Users/rayyu/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=18.0.1.1+2-6
-user.dir=C:\Users\rayyu\Documents\GitHub\Password-Manager
-os.name=Windows 11
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Sep 13 08:31:14 PDT 2023:
-Shutting down instance 185e801c-018a-8f2a-ed72-00001e78aa88 on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-----------------------------------------------------------------
-Wed Sep 13 08:31:16 PDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance 787c0020-018a-8f2a-ed72-00001e78aa88 
-on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@254989ff 
-Loaded from file:/C:/Users/rayyu/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=18.0.1.1+2-6
+Wed Sep 13 15:54:04 UTC 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018a-8f3f-e48c-000007581dd8 
+on database directory C:\Users\rayyu\Documents\GitHub\Password-Manager\database\user with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a 
+Loaded from file:/C:/Users/rayyu/AppData/Roaming/JetBrains/IntelliJIdea2022.1/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=JetBrains s.r.o.
+java.runtime.version=11.0.15+10-b2043.56
 user.dir=C:\Users\rayyu\Documents\GitHub\Password-Manager
 os.name=Windows 11
 os.arch=amd64
